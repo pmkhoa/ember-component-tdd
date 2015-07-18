@@ -37,5 +37,5 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
-  app.use('/api/users', usersRouter);
+  app.use('/api/v1/users', usersRouter);
 };

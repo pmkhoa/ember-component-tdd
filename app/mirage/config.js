@@ -7,8 +7,21 @@ export default function() {
 
     Note: these only affect routes defined *after* them!
   */
-  // this.namespace = '';    // make this `api`, for example, if your API is namespaced
+  this.namespace = 'api';    // make this `api`, for example, if your API is namespaced
   // this.timing = 400;      // delay for each request, automatically set to 0 during testing
+
+
+
+  this.get('/users', function() {
+    return {
+      users: [
+        {id: 1, name: "Khoa Pham"},
+        {id: 2, name: "Trey Ratcliff"},
+        {id: 3, name: "Jerry Seinfied"},
+        {id: 4, name: "Patrick Smith"}
+      ]
+    };
+  });
 
   /*
     Route shorthand cheatsheet
