@@ -22,10 +22,12 @@ test('visiting /users', function(assert) {
   });
 });
 
-test('should list all customer', function(assert) {
+test('should list all users', function(assert) {
+  server.createList("user", 6);
+
   visit('/users');
 
   andThen(function() {
-    assert.equal(find(".user").length, 0);
+    assert.equal(find(".user").length, 6);
   });
 });
