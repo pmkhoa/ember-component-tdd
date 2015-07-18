@@ -12,17 +12,18 @@ export default function() {
 
 
 
-  this.get('/users', function() {
-    return {
-      users: [
-        {id: 1, name: "Khoa Pham"},
-        {id: 2, name: "Trey Ratcliff"},
-        {id: 3, name: "Jerry Seinfied"},
-        {id: 4, name: "Patrick Smith"}
-      ]
-    };
-  });
+  // this.get('/users', function() {
+  //   return {
+  //     users: [
+  //       {id: 1, name: "Khoa Pham"},
+  //       {id: 2, name: "Trey Ratcliff"},
+  //       {id: 3, name: "Jerry Seinfied"},
+  //       {id: 4, name: "Patrick Smith"}
+  //     ]
+  //   };
+  // });
 
+  this.get('/users');
   /*
     Route shorthand cheatsheet
   */
