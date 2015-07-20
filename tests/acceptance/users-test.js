@@ -14,18 +14,18 @@ module('Acceptance | users', {
   }
 });
 
-test('visiting /users', function(assert) {
-  visit('/users');
+test('visiting index route /', function(assert) {
+  visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/users');
+    assert.equal(currentURL(), '/');
   });
 });
 
 test('should list all users', function(assert) {
   var users = server.createList("user", 6);
 
-  visit('/users');
+  visit('/');
 
   andThen(function() {
     assert.equal(find(".user").length, 6);
@@ -47,7 +47,7 @@ test('should list user on user detail page', function(assert) {
 test('clicking user detail link should load detail info', function(assert) {
   var users = server.createList("user", 6);
 
-  visit('/users');
+  visit('/');
   click('.user .user-detail-link:eq(0)');
 
   andThen(function() {
