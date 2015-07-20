@@ -23,11 +23,13 @@ test('visiting /users', function(assert) {
 });
 
 test('should list all users', function(assert) {
-  server.createList("user", 6);
+  var users = server.createList("user", 6);
 
   visit('/users');
 
   andThen(function() {
     assert.equal(find(".user").length, 6);
+    assert.equal(find(".user:first").text(), users[0].name);
+    assert.equal(find(".user:last").text(), users[users.length - 1].name);
   });
 });
