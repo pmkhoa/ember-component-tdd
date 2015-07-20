@@ -1,5 +1,6 @@
 {
   "predef": [
+    "db",
     "server",
     "faker",
     "document",

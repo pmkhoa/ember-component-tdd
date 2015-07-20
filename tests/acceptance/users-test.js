@@ -43,3 +43,18 @@ test('should list user on user detail page', function(assert) {
     assert.equal(find('h1:contains(Hello Khoa Pham)').length, 1);
   });
 });
+
+test('clicking user detail link should load detail info', function(assert) {
+  var users = server.createList("user", 6);
+
+  visit('/users');
+  click('.user .user-detail-link:eq(0)');
+
+  andThen(function() {
+    var user = users[0];
+    assert.equal(currentURL(), '/users/1');
+    assert.equal(find('.username').text(), user.name);
+    assert.equal(find('.email-address').text(), user.email);
+  });
+
+});
