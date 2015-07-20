@@ -33,3 +33,13 @@ test('should list all users', function(assert) {
     assert.equal(find(".user:last").text(), users[users.length - 1].name);
   });
 });
+
+test('should list user on user detail page', function(assert) {
+  var user = server.create('user', {name: 'Khoa Pham', email: 'khoapham@test.com'});
+
+  visit('/users/'+user.id);
+
+  andThen(function() {
+    assert.equal(find('h1:contains(Hello Khoa Pham)').length, 1);
+  });
+});
