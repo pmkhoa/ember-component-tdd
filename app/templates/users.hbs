@@ -1,8 +1,2 @@
-<h2>This is users page</h2>
-<ul class="users">
-{{#each users as |user|}}
-  <li class="user">{{#link-to 'users.user' user.id class="user-detail-link"}}{{user.name}}{{/link-to}}</li>
-{{/each}}
-</ul>
-
+{{users-list users=users}}
 {{outlet}}
