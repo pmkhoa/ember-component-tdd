@@ -19,8 +19,6 @@ html {
   zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-
 body {
   font: 1em 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
@@ -98,7 +96,8 @@ a {
     }
 }
 
-.user-detail {
+
+.user-detail-wrapper {
     display: block;
     width: auto;
     width: 100%;

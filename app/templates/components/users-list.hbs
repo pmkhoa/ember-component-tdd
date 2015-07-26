@@ -1,3 +1,6 @@
+<div id="sub-header">
+  {{#link-to "users" class="contact-count"}} <span class="entypo address_book"> &#59170; </span> <span class="contact-number"> View {{usersCount}} </span> {{inflection}} {{/link-to}}
+</div>
 {{#each users as |user|}}
   <li class="user">{{#link-to 'users.user' user.id class="user-detail-link"}}{{user.name}}{{/link-to}}</li>
 {{/each}}
